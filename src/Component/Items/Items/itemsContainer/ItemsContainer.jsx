@@ -1,6 +1,6 @@
 import React from 'react'
-import style from './ItemsContainer.module.css'
-import { Link } from 'react-router-dom'
+import styles from './ItemsContainer.module.css'
+import { NavLink } from 'react-router-dom'
 
 const ItemsContainer = (props) => {
 
@@ -17,10 +17,13 @@ const ItemsContainer = (props) => {
     }
 
     return (
-        <div className={style.container}>
-            <Link to={`/${props.index}`}><p>{props.inputText}</p></Link>
-            <button onClick={deleteItem}>Delete</button>
-        </div>
+        <NavLink className={styles.text} activeClassName="active" to={`/${props.index}`}>
+            <div className={styles.container}>
+                <p>{props.inputText}</p>
+                <button onClick={deleteItem}>Delete</button>
+            </div>
+        </NavLink>
+
     )
 }
 

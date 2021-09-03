@@ -25,7 +25,7 @@ function App() {
       <div className={style.main}>
         <Items setData={setData} setLocalStore={setLocalStore} localStore={localStore} data={data} />
         <Route exact path={`/`}> <Comments /></Route>
-        {data ? data.map((i, index) => (<Route path={`/${index}`}> <Comments
+        {data ? data.map((i, index) => (<Route activeClassName="active" path={`/${index}`}> <Comments
           index={index}
           key={i.id}
           id={i.id}
