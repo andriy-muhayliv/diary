@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  color: black;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+}
+
+.container p {
+}
+
+button {
+  margin: 0;
+}

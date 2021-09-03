@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import style from './App.module.css';
+import Items from './Component/Items/Items';
+import { useState, useEffect } from 'react';
+import Comments from './Component/Comments/Comments';
+import { Route } from 'react-router-dom';
 
 function App() {
+  let [localStore, setLocalStore] = useState(JSON.parse(localStorage.getItem('data')));
+  let [data, setData] = useState();
+  console.log(data)
+  useEffect(() => {
+    setData(localStore);
+  }, [localStore])
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.app}>
+      <div className={style.left}>
+        <div className={style.text}>
+          <h1>DAIRY APP</h1>
+          <p>Comment with no sense</p>
+        </div>
+      </div>
+      <div className={style.main}>
+        <Items setData={setData} setLocalStore={setLocalStore} localStore={localStore} data={data} />
+        <Route exact path={`/`}> <Comments /></Route>
+        {data ? data.map((i, index) => (<Route path={`/${index}`}> <Comments
+          index={index}
+          key={i.id}
+          id={i.id}
+          data={data}
+          setData={setData}
+          comments={i.comments}
+          setLocalStore={setLocalStore} /></Route>)) : null}
+      </div>
     </div>
   );
 }
