@@ -9,6 +9,7 @@
 .app {
   display: flex;
   overflow: hidden;
+  height: 100vh;
 }
 
 .left {
@@ -19,6 +20,8 @@
   position: relative;
   top: 0;
   bottom: 0;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .text {

@@ -40,7 +40,7 @@ const Comments = (props) => {
                 <h2>Comments # {props.index + 1}</h2>
                 {props.comments ? props.comments.map((i, index) => (<p key={index}>{i}</p>)) : null}
             </div>
-            <div>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
                 {props.data ? (<input onChange={value} value={commentValue} />) : null}
             </div>
         </div>
