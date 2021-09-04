@@ -5,6 +5,10 @@
   -moz-box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.37);
   box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.37);
 }
+.content h2 {
+  margin: 20px 0 30px 20px;
+  font-size: 35px;
+}
 
 .content p {
   margin-left: auto;

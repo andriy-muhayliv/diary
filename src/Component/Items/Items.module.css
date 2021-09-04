@@ -16,6 +16,11 @@ h2 {
   color: rgb(0, 0, 0, 0.7);
 }
 
+.content h2 {
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
 input {
   padding: 7px;
   border: 1px solid rgb(0, 0, 0, 0.2);
