@@ -1,8 +1,24 @@
 .box {
   width: 100%;
-  height: 60%;
   margin: 20px;
   -webkit-box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.37);
   -moz-box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.37);
   box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.37);
+}
+
+.content p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  width: 90%;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+.box input {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 20px;
+  height: 100px;
 }

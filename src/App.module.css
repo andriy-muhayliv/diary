@@ -8,13 +8,17 @@
 
 .app {
   display: flex;
+  overflow: hidden;
 }
 
 .left {
-  height: 100vh;
   background-color: #2b2f3e;
   padding: 10px 20px;
+  width: 14%;
   color: white;
+  position: relative;
+  top: 0;
+  bottom: 0;
 }
 
 .text {
@@ -30,4 +34,5 @@
   height: 100vh;
   display: flex;
   justify-content: space-around;
+  overflow-y: scroll;
 }

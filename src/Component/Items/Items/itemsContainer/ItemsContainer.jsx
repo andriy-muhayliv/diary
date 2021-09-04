@@ -22,7 +22,7 @@ const ItemsContainer = (props) => {
         <NavLink className={styles.text} activeClassName={styles.active} to={`/${props.index}`}>
             <div className={styles.container}>
                 <p>{props.inputText}</p>
-                <button onClick={deleteItem}>Delete</button>
+                <button style={{ width: '20%' }} onClick={deleteItem}>Delete</button>
             </div>
         </NavLink>
 

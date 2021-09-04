@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import style from './Comments.module.css'
+import styles from './Comments.module.css'
 
 
 
@@ -35,9 +35,9 @@ const Comments = (props) => {
 
 
     return (
-        <div className={style.box}>
-            <div className={style.content}>
-                <h2>Comments #{ }</h2>
+        <div className={styles.box}>
+            <div className={styles.content}>
+                <h2>Comments # {props.index + 1}</h2>
                 {props.comments ? props.comments.map((i, index) => (<p key={index}>{i}</p>)) : null}
             </div>
             <div>
