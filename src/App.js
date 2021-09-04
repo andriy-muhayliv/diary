@@ -2,7 +2,7 @@ import style from './App.module.css';
 import Items from './Component/Items/Items';
 import { useState, useEffect } from 'react';
 import Comments from './Component/Comments/Comments';
-import { Route } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 
 function App() {
   let [localStore, setLocalStore] = useState(JSON.parse(localStorage.getItem('data')));
@@ -18,8 +18,10 @@ function App() {
     <div className={style.app}>
       <div className={style.left}>
         <div className={style.text}>
-          <h1>DAIRY APP</h1>
-          <p>Comment with no sense</p>
+          <NavLink to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
+            <h1>DAIRY APP</h1>
+            <p>Comment with no sense</p>
+          </NavLink>
         </div>
       </div>
       <div className={style.main}>
