@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  color: black;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
   display: flex;
@@ -32,6 +31,9 @@ button {
   font-weight: 900;
 }
 
-.active {
-  color: rgb(255, 217, 0);
+.active p {
+  margin-left: -22px;
+  padding-left: 18px;
+  border-left: 4px solid #ff2f5a;
+  position: relative;
 }

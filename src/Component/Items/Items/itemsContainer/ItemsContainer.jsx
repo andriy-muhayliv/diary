@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom'
 
 const ItemsContainer = (props) => {
 
+    console.log(styles)
+
     const deleteItem = () => {
         let arr = props.data.slice();
 
@@ -17,7 +19,7 @@ const ItemsContainer = (props) => {
     }
 
     return (
-        <NavLink className={styles.text} activeClassName="active" to={`/${props.index}`}>
+        <NavLink className={styles.text} activeClassName={styles.active} to={`/${props.index}`}>
             <div className={styles.container}>
                 <p>{props.inputText}</p>
                 <button onClick={deleteItem}>Delete</button>
