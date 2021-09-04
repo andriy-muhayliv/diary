@@ -8,9 +8,8 @@ const Comments = (props) => {
 
     let value = (e) => {
         let val = e.target.value;
-        localStorage.setItem(`comment${props.id}`, val);
         setCommentValue(val);
-
+        localStorage.setItem(`comment${props.id}`, val);
     }
 
     useEffect(() => {
@@ -19,7 +18,7 @@ const Comments = (props) => {
                 let newData = Object.assign([], props.data)
                 newData.map((i, index) => {
                     if (i.id === props.id) {
-                        return newData[index].comments = [...newData[index].comments, commentValue];
+                        newData[index].comments = [...newData[index].comments, commentValue];
                     }
                 })
 
@@ -37,7 +36,7 @@ const Comments = (props) => {
     return (
         <div className={styles.box}>
             <div className={styles.content}>
-                <h2>Comments # {props.index + 1}</h2>
+                <h2>Comments # {props.data ? props.index + 1 : null}</h2>
                 {props.comments ? props.comments.map((i, index) => (<p key={index}>{i}</p>)) : null}
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>

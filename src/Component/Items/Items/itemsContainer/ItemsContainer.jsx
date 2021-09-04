@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom'
 
 const ItemsContainer = (props) => {
 
-    console.log(styles)
 
     const deleteItem = () => {
         let arr = props.data.slice();
