@@ -18,7 +18,7 @@ function App() {
     <div className={style.app}>
       <div className={style.left}>
         <div className={style.text}>
-          <NavLink to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
+          <NavLink to='/' className={style.link}>
             <h1>DAIRY APP</h1>
             <p>Comment with no sense</p>
           </NavLink>
