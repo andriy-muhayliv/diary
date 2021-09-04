@@ -48,7 +48,8 @@ const Items = (props) => {
                         key={i.id}
                         id={i.id}
                         inputText={i.inputText}
-                        text={i.text} />))
+                        text={i.text}
+                        item={i} />))
                         : null}
                 </div>
 

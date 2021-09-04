@@ -16,11 +16,13 @@ const ItemsContainer = (props) => {
             }
         });
     }
-
     return (
         <NavLink className={styles.text} activeClassName={styles.active} to={`/${props.index}`}>
             <div className={styles.container}>
-                <p>{props.inputText}</p>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <p>{props.inputText}</p>
+                    <div className={styles.counter}>{props.item.comments.length ? props.item.comments.length - 1 : null}</div>
+                </div>
                 <button style={{ width: '20%' }} onClick={deleteItem}>Delete</button>
             </div>
         </NavLink>

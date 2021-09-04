@@ -32,7 +32,8 @@ function App() {
           data={data}
           setData={setData}
           comments={i.comments}
-          setLocalStore={setLocalStore} /></Route>)) : null}
+          setLocalStore={setLocalStore}
+        /></Route>)) : null}
       </div>
     </div>
   );
