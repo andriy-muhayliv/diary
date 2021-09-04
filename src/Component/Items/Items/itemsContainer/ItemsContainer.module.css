@@ -27,17 +27,16 @@ button {
 }
 
 .text p {
-  font-weight: bold;
-  font-weight: 900;
+  font-weight: bold !important;
   display: flex;
   align-items: center;
+  height: 40px;
 }
 
 .active p {
   margin-left: -22px;
   padding-left: 18px;
   border-left: 4px solid #ff2f5a;
-  position: relative;
 }
 
 .counter {
