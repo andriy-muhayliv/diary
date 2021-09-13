@@ -21,7 +21,7 @@ const ItemsContainer = (props) => {
             <div className={styles.container}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <p>{props.inputText}</p>
-                    <div className={styles.counter}>{props.item.comments.length ? props.item.comments.length - 1 : null}</div>
+                    <div className={styles.counter}>{props.item.comments.length && props.item.comments.length}</div>
                 </div>
                 <button style={{ width: '20%' }} onClick={deleteItem}>Delete</button>
             </div>

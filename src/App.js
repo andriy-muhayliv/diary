@@ -5,7 +5,10 @@ import Comments from './Component/Comments/Comments';
 import { NavLink, Route } from 'react-router-dom';
 
 function App() {
+
+
   let [localStore, setLocalStore] = useState(JSON.parse(localStorage.getItem('data')));
+
   let [data, setData] = useState();
   console.log(data)
   useEffect(() => {
@@ -26,8 +29,7 @@ function App() {
       </div>
       <div className={style.main}>
         <Items setData={setData} setLocalStore={setLocalStore} localStore={localStore} data={data} />
-        <Route exact path={`/`}> <Comments /></Route>
-        {data ? data.map((i, index) => (<Route path={`/${index}`}> <Comments
+        {data && data.map((i, index) => (<Route path={`/${index}`}> <Comments
           index={index}
           key={i.id}
           id={i.id}
@@ -35,10 +37,12 @@ function App() {
           setData={setData}
           comments={i.comments}
           setLocalStore={setLocalStore}
-        /></Route>)) : null}
+          localStore={localStore}
+        /></Route>))}
       </div>
     </div>
   );
 }
 
 export default App;
+

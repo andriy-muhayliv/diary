@@ -16,7 +16,7 @@ const Items = (props) => {
         if (inputValue.trim(' ').length >= 1) {
             let id = Date.now();
 
-            let obj = { 'id': id, 'inputText': inputValue.trim(' '), 'comments': [], }
+            let obj = { 'id': id, 'inputText': inputValue.trim(' '), 'comments': [], commentValue: '' }
 
             let newData = () => {
                 if (props.data === null) {
@@ -25,7 +25,7 @@ const Items = (props) => {
                     return [...props.data, obj]
                 }
             }
-            let local = localStorage.setItem('data', JSON.stringify(newData()))
+            localStorage.setItem('data', JSON.stringify(newData()))
             props.setLocalStore(JSON.parse(localStorage.getItem('data')))
             localStorage.setItem('ItemsInputValue', '');
             setInputValue('');
